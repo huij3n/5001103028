@@ -1,0 +1,396 @@
+body, html{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+.container{
+    position: relative;
+    width: 100%;
+    height: 100%; 
+    overflow: hidden;
+}
+.Lake{
+    position: relative; 
+    width: 100%;       
+    height: 100%;      
+    overflow: hidden;
+    background-image: url('images/bbg.png');
+    height: 710px;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+.ca{
+    position: absolute;
+    width: 10%;
+    height: 10%;
+    background-size: cover;
+    animation: swim 8s linear infinite;
+}
+.ca1 {
+    background-image: url('images/ca1.png');
+    top: 10%;
+    left: -10%;
+    width: 200px;
+    height: 100px;
+    animation-delay: 0s;
+  }
+  
+  .caxoay{
+    position: absolute;
+    width: 10%;
+    height: 10%;
+    background-size: cover;
+    animation: rotate 8s linear infinite;
+  }
+  .ca2 {
+    background-image: url('images/ca2.png');
+    top: 50%;
+    left: 10%;
+    animation-delay: 2s;
+    width: 50px;
+    height: 50px;
+  }
+  
+  .camat{
+    position: absolute;
+    width: 10%;
+    height: 10%;
+    background-size: cover;
+    animation: dissapear 8s linear infinite;
+  }
+  
+  .ca3 {
+    background-image: url('images/ca3.png');
+    bottom: 4%;
+    left: -10%;
+    animation-delay: 4s;
+    width: 70px;
+    height: 70px;
+  }
+
+  .caup{
+    position: absolute;
+    width: 10%;
+    height: 10%;
+    background-size: cover;
+  }
+  .caholo1{
+    background-image: url('images/caholo1.png');
+    bottom: -10%;
+    right: -10%;
+    width: 70px;
+    height: 80px;
+    animation: northeast 8s linear 1 2s;
+  }
+  .caholo2{
+    background-image: url('images/caholo2.png');
+    bottom: -50%;
+    right: -50%;
+    width: 50px;
+    height: 50px;
+    animation: northeast 7s linear infinite 4s;
+  }
+  .cangang{
+    position: absolute;
+    width: 10%;
+    height: 10%;
+    background-size: cover;
+    animation: hori 8s linear infinite 5s;
+  }
+  .nemo1{
+    background-image: url('images/nemo.png');
+    top: 15%;
+    left: -10%;
+    animation-delay: 4s;
+    width: 70px;
+    height: 70px;
+  }
+  .nemo2{
+    background-image: url('images/nemo.png');
+    top: 10%;
+    left: -10%;
+    animation-delay: 4.5s;
+    width: 70px;
+    height: 70px;
+  }
+  .nemo3{
+    background-image: url('images/nemo.png');
+    top: 20%;
+    left: -10%;
+    animation-delay: 5s;
+    width: 70px;
+    height: 70px;
+  }
+
+  @keyframes swim {
+    0% {
+      top: 20%;
+      left: -10%;
+    }
+    100% {
+      top: 50%;
+      left: 100%;
+    }
+}
+
+  @keyframes dissapear {
+      0%{
+          opacity: 0;
+          transform: translateX(0);
+      }        
+      12.5%{
+          opacity: 1;
+          transform: translateX(200px);
+      }
+      25%{
+          opacity: 0;
+          transform: translateX(-200px);
+      }  
+      62.5%{
+          opacity: 1;
+          transform: translateX(1000px);
+      } 
+      100%{
+          opacity: 0;
+          transform: translateX(1600px);
+      }   
+}
+
+    @keyframes rotate {
+        0% {
+            transform: rotate(360deg);
+            opacity: 1;
+          }
+          25% {
+            transform: rotate(180deg);
+            opacity: 1;
+          }
+          50% {
+            transform: rotate(0deg);
+            opacity: 1;
+          }
+          75%{
+            transform: rotate(-180deg);
+            opacity: 1;
+          }
+          100%{
+            transform: rotate(-360deg);
+            opacity: 1;
+          }
+    }
+    @keyframes northeast {
+      0% {
+        bottom: 10%;
+        right: -10%;
+      }
+      100% {
+        bottom: 50%;
+        right: 100%;
+      }
+    }
+
+    @keyframes hori{
+      0%{
+        top:10%;
+        left: -10%;
+      }
+      100%{
+        top:10%;
+        left: 100%;
+      }
+    }
+    .bubbles{margin: 0;padding: 0;overflow: hidden;height: 100vh;display: flex;justify-content: center;align-items: center;flex-direction: column;}
+    .bub{position: absolute;width: 10px;height: 10px;background-color: rgba(255, 255, 255, 0.7);border-radius: 50%;animation: bubble-rise 4s ease-in-out infinite;}
+    .bubble1 { left: 10%; bottom: -10%; animation-delay: 0s; }
+    .bubble2 { left: 25%; bottom: -10%; animation-delay: 1s; }
+    .bubble3 { left: 50%; bottom: -10%; animation-delay: 2s; }
+    .bubble4 { left: 75%; bottom: -10%; animation-delay: 4s; }
+    .bubble5 { left: 90%; bottom: -10%; animation-delay: 5s; }
+    .bubble6 { left: 63%; bottom: -10%; animation-delay: 1s; }
+    .bubble7 { left: 45%; bottom: -10%; animation-delay: 2s; }
+    .bubble8 { left: 86%; bottom: -10%; animation-delay: 3s; }
+    .bubble9 { left: 5%; bottom: -10%; animation-delay: 4s; }
+    .bubble10 { left: 32%; bottom: -10%; animation-delay: 3s; }
+    @keyframes bubble-rise {
+        0% {
+            transform: translateY(0) scale(1);
+            opacity: 1;
+          }
+          100% {
+            transform: translateY(-100vh) scale(0.5);
+            opacity: 0;
+          }
+        }
+.rong{margin: 0;padding: 0;height: 100vh;display: flex;justify-content: center;align-items: center;overflow: visible;}
+.Ceratophyllaceae{position: relative;width: 10%;height: 10%;background-size: cover;animation: sway 3s ease-in-out infinite;}
+.Cera1{position: absolute;background-image: url('images/cera1.png');bottom: -2%;left: 1%;animation-delay: 2s;width: 120px;height: 120px;}
+.Cera1-1{position: absolute;background-image: url('images/cera1.png');bottom: -2%;left: 16%;animation-delay: 2s;width: 120px;height: 120px;}
+.Cera1-2{position: absolute;background-image: url('images/cera1.png');bottom: -2%;left: 2%;animation-delay: 2s;width: 110px;height: 110px;}
+.Cera1-3{position: absolute;background-image: url('images/cera1.png');bottom: -2%;left: 7%;animation-delay: 2s;width: 110px;height: 110px;}
+.Cera1-4{position: absolute;background-image: url('images/cera1.png');bottom: -2%;left: 23%;animation-delay: 2s;width: 110px;height: 110px;}
+.Cera1-5{position: absolute;background-image: url('images/cera1.png');bottom: -2%;left: 13%;animation-delay: 2s;width: 110px;height: 110px;}
+.Cera3{position: absolute;background-image: url('images/cera3.png');bottom: 0%;left: 31%;animation-delay: 2s;width: 110px;height: 110px;}
+.Cera3-1{position: absolute;background-image: url('images/cera3.png');bottom: 0%;left: 37%;animation-delay: 2s;width: 110px;height: 110px;}
+.Cera3-2{position: absolute;background-image: url('images/cera3.png');bottom: 0%;left: 42%;animation-delay: 2s;width: 110px;height: 110px;}
+.Cera3-3{position: absolute;background-image: url('images/cera3.png');bottom: 0%;left: 45%;animation-delay: 2s;width: 110px;height: 110px;}
+.Cera3-4{position: absolute;background-image: url('images/cera3.png');bottom: 0%;left: 51%;animation-delay: 2s;width: 110px;height: 110px;}
+.Cera3-5{position: absolute;background-image: url('images/cera3.png');bottom: 0%;left: 56%;animation-delay: 2s;width: 110px;height: 110px;}
+.Cera4{position: absolute;background-image: url('images/cera4.png');bottom: 0%;left: 78%;animation-delay: 2s;width: 110px;height: 110px;}
+.Cera4-1{position: absolute;background-image: url('images/cera4.png');bottom: 0%;left: 81%;animation-delay: 2s;width: 110px;height: 110px;}
+.Cera4-2{position: absolute;background-image: url('images/cera4.png');bottom: 0%;left: 89%;animation-delay: 2s;width: 110px;height: 110px;}
+.Cera4-3{position: absolute;background-image: url('images/cera4.png');bottom: 0%;left: 68%;animation-delay: 2s;width: 110px;height: 110px;}
+.Cera4-4{position: absolute;background-image: url('images/cera4.png');bottom: 0%;left: 65%;animation-delay: 2s;width: 110px;height: 110px;}
+.Cera4-5{position: absolute;background-image: url('images/cera4.png');bottom: 0%;left: 60%;animation-delay: 2s;width: 110px;height: 110px;}
+@keyframes sway {
+    0% {
+        transform: rotate(0deg) translateX(0);
+      }
+      25% {
+        transform: rotate(5deg) translateX(5px);
+      }
+      50% {
+        transform: rotate(0deg) translateX(0);
+      }
+      75% {
+        transform: rotate(-5deg) translateX(-5px);
+      }
+      100% {
+        transform: rotate(0deg) translateX(0);
+      }
+}
+.fall{margin: 0;padding: 0;height: 100vh;display: flex;justify-content: center;align-items: center;overflow: visible;}
+.glbt{position: relative;height: 100vh;overflow: hidden;}
+.glassbottle{
+    position: absolute;
+    top: -10%;
+    left: 20%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 50px;
+    background-image: url('images/glassbottle.png');
+    background-size: cover;
+    animation: fall 15s ease-in 1, wobble 3s ease-in-out infinite;
+}
+.wine{
+    position: absolute;
+    top: -10%;
+    left: 70%;
+    transform: translateX(-60%);
+    width: 70px;
+    height: 70px;
+    background-image: url('images/wine.png');
+    background-size: cover;
+    animation: fall 12s ease-in 1, wobble 3s ease-in-out infinite;
+}
+.bbot{
+    position: absolute;
+    top: -10%;
+    left: 90%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 50px;
+    background-image: url('images/bbot.png');
+    background-size: cover;
+    animation: fall 13s ease-in 1, wobble 3s ease-in-out infinite;
+}
+.seashells1{
+    position: absolute;
+    top: -10%;
+    left: 80%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 60px;
+    background-image: url('images/oc1.png');
+    background-size: cover;
+    animation: fall 3s ease-in 10, wobble 3s ease-in-out infinite;
+    animation-delay: 13s;
+}
+.seashells2{
+    position: absolute;
+    top: -10%;
+    left: 40%;
+    transform: translateX(-50%);
+    width: 90px;
+    height: 80px;
+    background-image: url('images/oc2.png');
+    background-size: cover;
+    animation: fall 5s ease-in 10, wobble 3s ease-in-out infinite;
+    animation-delay: 7s;
+}
+.seashells3{
+  position: absolute;
+  top: -10%;
+  left: 10%;
+  transform: translateX(-50%);
+  width: 90px;
+  height: 80px;
+  background-image: url('images/oc2.png');
+  background-size: cover;
+  animation: fall 4s ease-in 10, wobble 3s ease-in-out infinite;
+  animation-delay: 13s;
+}
+.seashells4{
+  position: absolute;
+  top: -20%;
+  left: 55%;
+  transform: translateX(-50%);
+  width: 90px;
+  height: 80px;
+  background-image: url('images/oc1.png');
+  background-size: cover;
+  animation: fall 8s ease-in 2, wobble 3s ease-in-out infinite;
+  animation-delay: 8s;
+}
+.seashells5{
+  position: absolute;
+  top: -10%;
+  left: 34%;
+  transform: translateX(-50%);
+  width: 90px;
+  height: 80px;
+  background-image: url('images/oc2.png');
+  background-size: cover;
+  animation: fall 10s ease-in 10, wobble 3s ease-in-out infinite;
+  animation-delay: 2s;
+}
+.oldest_epic{
+  position: absolute;
+  width: 175px;       
+  height: 170px;      
+  background-image: url('images/gilgamesh_tablet.png');
+  top: -30%;
+  right: 90%;
+  transform: scale(1);
+  transition: transform 0.3s ease;
+  animation: fall 4s ease-in 1;
+  animation-delay: 18s;
+}
+.oldest_epic:hover{
+transform: scale(1.1);
+}
+@keyframes fall {
+    0%{
+        top: -15%;
+        opacity: 1;
+    }
+    100%{
+        top:100vh;
+        opacity: 0.5;
+    }
+}
+@keyframes wobble {
+    0%, 100% {
+      transform: translateX(-50%) rotate(0deg);
+    }
+    25% {
+      transform: translateX(-50%) rotate(-5deg);
+    }
+    50% {
+      transform: translateX(-50%) rotate(5deg);
+    }
+    75% {
+      transform: translateX(-50%) rotate(-5deg);
+    }
+  }
